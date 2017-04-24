@@ -1,0 +1,120 @@
+<top-nav></top-nav>
+
+<div class="regestration-main-slider-container">
+
+
+<div class="maincontainersectionslider inner-slider-new">
+  <div class="imgmain-new-reg-subwrapp">
+<a class="w3-btn-floating w3-display-left" (click)="plusDivs(-1)">&#10094;</a>
+
+<div class="w3-content w3-display-container" *ngFor="let image of images let i=index">
+  <div class="imgmain">
+  <img  class="mySlides" id="mySlides{{i}}" src="{{image.url}}" style="width:100%">
+  </div>
+</div>
+
+<a class="w3-btn-floating w3-display-right" (click)="plusDivs(1)">&#10095;</a>
+</div>
+</div>
+</div>
+
+
+<!-- <div class="maincontainersectionslider inner-slider-new">
+  <div class="imgmain-new-reg-subwrapp">
+<a class="w3-btn-floating w3-display-left" (click)="plusDivs(-1)">&#10094;</a>
+
+<div class="w3-content w3-display-container">
+  <div class="imgmain">
+  <img  class="mySlides" id="mySlides0" src="imagesnew/MOBILE_APPTUTORIALS/1.png" style="width:100%">
+  </div>
+</div>
+
+<div class="w3-content w3-display-container">
+  <div class="imgmain">
+  <img  class="mySlides" id="mySlides1" src="imagesnew/MOBILE_APPTUTORIALS/2.png" style="width:100%">
+  </div>
+</div>
+
+<div class="w3-content w3-display-container">
+  <div class="imgmain">
+  <img  class="mySlides" id="mySlides2" src="imagesnew/MOBILE_APPTUTORIALS/3.png" style="width:100%">
+  </div>
+</div>
+
+<div class="w3-content w3-display-container">
+  <div class="imgmain">
+  <img  class="mySlides" id="mySlides3" src="imagesnew/MOBILE_APPTUTORIALS/4.png" style="width:100%">
+  </div>
+</div>
+
+<div class="w3-content w3-display-container">
+  <div class="imgmain">
+  <img  class="mySlides" id="mySlides4" src="imagesnew/MOBILE_APPTUTORIALS/5.png" style="width:100%">
+  </div>
+</div>
+
+<div class="w3-content w3-display-container">
+  <div class="imgmain">
+  <img  class="mySlides" id="mySlides5" src="imagesnew/MOBILE_APPTUTORIALS/6.png" style="width:100%">
+  </div>
+</div>
+
+<div class="w3-content w3-display-container">
+  <div class="imgmain">
+  <img  class="mySlides" id="mySlides6" src="imagesnew/MOBILE_APPTUTORIALS/7.png" style="width:100%">
+  </div>
+</div>
+
+<a class="w3-btn-floating w3-display-right" (click)="plusDivs(1)">&#10095;</a>
+</div>
+<!-- Tab Slider -->
+<!-- <div *ngIf= tab class="maincontainersectionslider fortabonlycls">
+  <div class="imgmain-new-reg-subwrapp">
+    <a class="w3-btn-floating w3-display-left" (click)="plusDiv(-1)">&#10094;</a>
+
+    <div class="w3-content w3-display-container">
+      <div class="imgmain">
+        <img class="mySlides1" id="mySlide0" src="imagesnew/Tab_portrait mode_App/1.png" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-content w3-display-container">
+      <div class="imgmain">
+        <img class="mySlides1" id="mySlide1" src="imagesnew/Tab_portrait mode_App/2.png" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-content w3-display-container">
+      <div class="imgmain">
+        <img class="mySlides1" id="mySlide2" src="imagesnew/Tab_portrait mode_App/3.png" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-content w3-display-container">
+      <div class="imgmain">
+        <img class="mySlides1" id="mySlide3" src="imagesnew/Tab_portrait mode_App/4.png" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-content w3-display-container">
+      <div class="imgmain">
+        <img class="mySlides1" id="mySlide4" src="imagesnew/Tab_portrait mode_App/5.png" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-content w3-display-container">
+      <div class="imgmain">
+        <img class="mySlides1" id="mySlide5" src="imagesnew/Tab_portrait mode_App/6.png" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-content w3-display-container">
+      <div class="imgmain">
+        <img class="mySlides1" id="mySlide6" src="imagesnew/Tab_portrait mode_App/7.png" style="width:100%">
+      </div>
+    </div>
+
+    <a class="w3-btn-floating w3-display-right" (click)="plusDiv(1)">&#10095;</a>
+  </div>
+</div>
+</div> -->

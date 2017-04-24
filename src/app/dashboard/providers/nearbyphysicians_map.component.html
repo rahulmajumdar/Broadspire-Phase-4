@@ -1,0 +1,70 @@
+
+<div class="col-sm-12 mp-pg-nw mg-bt-al" style="text-align:center; margin-bottom:20px; margin-top:20px;  z-index:9;">
+<button style="background:#fff; float: right; right: 4%; position: relative;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><img src="images/menu.png"  />
+</button>
+</div>
+
+
+        <!-- -------------------Modal To Display Results In List Starts----------------------------------->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Providers List</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <ul class="list-group"  *ngFor="let item of providersList" style="font-size:12px;text-align:left;">
+
+                            <li style = "border-bottom: 1px solid #e5e5e5;background-color:rgb(242, 242, 242);" (click)="clickedItemLatLong(item.latitude,item.longitude)" class="list-group-item">
+                                <label style="font-weight:bold;">{{item.facility_name}}</label><br>
+                                <label>{{item.medical_specialty}}</label><br>
+                                <label>{{item.address1}}</label><br>
+                                <label>{{item.city}}, {{item.state}} {{item.zip_code}}</label><br>
+                                <label>Phone: {{item.phone | truncate : 0:3 }}-{{item.phone | truncate : 3:6 }}
+                                  -{{item.phone | truncate : 6:10 }}</label><br>
+                                <label style="font-weight:bold;">{{item.distance | number : '.2-2'}} (miles)</label>
+                            </li></ul>
+
+
+
+
+
+
+                    </div>
+                    <div class="map-pag-new">
+                    <ul class="pagination" *ngIf = "showPagination">
+
+                                              <li *ngFor = "let i of totalPages"
+                                            [class.active]="item==i" >
+                                               <a (click) ="paginationItemClicked($event);item = i" >{{i}}</a></li>
+
+                                          </ul>
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- -------------------Modal To Display Results In List Ends----------------------------------->
+
+
+<div id = "map" style class = "row row-sm md-whiteframe-z2"  >
+
+    <div class="map-map-nn"   id = "gmaps" style = "height:100%;" >
+
+
+
+    </div>
+
+    <div class="mapfotter"  style = "text-align:center;">
+
+
+    </div>
+  <div style="clear:both;"></div>
+</div>

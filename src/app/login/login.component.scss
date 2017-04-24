@@ -1,0 +1,648 @@
+@import '../app.component.scss';
+
+
+
+//@extend-elements
+//original selectors
+//.container-fluid::after, .container::after, .row::after
+%extend_1 {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+//original selectors
+//.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+%extend_2 {
+	min-height: 1px;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	position: relative;
+}
+
+//original selectors
+//sub, sup
+%extend_3 {
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+//original selectors
+//.onemmrtxt h5, .onemmrtxt h6
+%extend_4 {
+	color: $color_fun_green_approx;
+	font-size: 12px;
+	line-height: 17px;
+}
+
+//original selectors
+//.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
+%extend_5 {
+	font-family: inherit;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+
+
+.container-fluid::after {
+	@extend %extend_1;
+}
+.container::after {
+	@extend %extend_1;
+}
+.row::after {
+	@extend %extend_1;
+}
+.row {
+	margin-left: -0.9375rem;
+	margin-right: -0.9375rem;
+}
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+}
+.col-sm-5 {
+	width: 41.6667%;
+	@extend %extend_2;
+	float: left;
+}
+.col-lg-1 {
+	@extend %extend_2;
+}
+.col-lg-10 {
+	@extend %extend_2;
+}
+.col-lg-11 {
+	@extend %extend_2;
+}
+.col-lg-12 {
+	@extend %extend_2;
+	width: 100%;
+}
+.col-lg-2 {
+	@extend %extend_2;
+}
+.col-lg-3 {
+	@extend %extend_2;
+}
+.col-lg-4 {
+	@extend %extend_2;
+}
+.col-lg-5 {
+	@extend %extend_2;
+}
+.col-lg-6 {
+	@extend %extend_2;
+}
+.col-lg-7 {
+	@extend %extend_2;
+}
+.col-lg-8 {
+	@extend %extend_2;
+}
+.col-lg-9 {
+	@extend %extend_2;
+}
+.col-md-1 {
+	@extend %extend_2;
+}
+.col-md-10 {
+	@extend %extend_2;
+}
+.col-md-11 {
+	@extend %extend_2;
+}
+.col-md-12 {
+	@extend %extend_2;
+}
+.col-md-2 {
+	@extend %extend_2;
+}
+.col-md-3 {
+	@extend %extend_2;
+}
+.col-md-4 {
+	@extend %extend_2;
+}
+.col-md-5 {
+	@extend %extend_2;
+}
+.col-md-6 {
+	@extend %extend_2;
+}
+.col-md-7 {
+	@extend %extend_2;
+}
+.col-md-8 {
+	@extend %extend_2;
+}
+.col-md-9 {
+	@extend %extend_2;
+}
+.col-sm-1 {
+	@extend %extend_2;
+	float: left;
+}
+.col-sm-10 {
+	@extend %extend_2;
+	float: left;
+}
+.col-sm-11 {
+	@extend %extend_2;
+	float: left;
+}
+.col-sm-12 {
+	@extend %extend_2;
+	width: 100%;
+	float: left;
+}
+.col-sm-2 {
+	@extend %extend_2;
+	width: 16.6667%;
+	float: left;
+}
+.col-sm-3 {
+	@extend %extend_2;
+	float: left;
+}
+.col-sm-4 {
+	@extend %extend_2;
+	float: left;
+}
+.col-sm-6 {
+	@extend %extend_2;
+	width: 50%;
+	float: left;
+}
+.col-sm-7 {
+	@extend %extend_2;
+	float: left;
+}
+.col-sm-8 {
+	@extend %extend_2;
+	width: 66.6667%;
+	float: left;
+}
+.col-sm-9 {
+	@extend %extend_2;
+	float: left;
+}
+.col-xl-1 {
+	@extend %extend_2;
+}
+.col-xl-10 {
+	@extend %extend_2;
+}
+.col-xl-11 {
+	@extend %extend_2;
+}
+.col-xl-12 {
+	@extend %extend_2;
+}
+.col-xl-2 {
+	@extend %extend_2;
+}
+.col-xl-3 {
+	@extend %extend_2;
+}
+.col-xl-4 {
+	@extend %extend_2;
+}
+.col-xl-5 {
+	@extend %extend_2;
+}
+.col-xl-6 {
+	@extend %extend_2;
+}
+.col-xl-7 {
+	@extend %extend_2;
+}
+.col-xl-8 {
+	@extend %extend_2;
+}
+.col-xl-9 {
+	@extend %extend_2;
+}
+.col-xs-1 {
+	@extend %extend_2;
+}
+.col-xs-10 {
+	@extend %extend_2;
+}
+.col-xs-11 {
+	@extend %extend_2;
+}
+.col-xs-12 {
+	@extend %extend_2;
+}
+.col-xs-2 {
+	@extend %extend_2;
+}
+.col-xs-3 {
+	@extend %extend_2;
+}
+.col-xs-4 {
+	@extend %extend_2;
+}
+.col-xs-5 {
+	@extend %extend_2;
+	&.col-sm-5.col-md-3.col-lg-5.center-block.lg-pg-nw {
+		margin-top: 0;
+	}
+}
+.col-xs-6 {
+	@extend %extend_2;
+}
+.col-xs-7 {
+	@extend %extend_2;
+}
+.col-xs-8 {
+	@extend %extend_2;
+}
+.col-xs-9 {
+	@extend %extend_2;
+}
+.p-v-md {
+	padding-bottom: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 24px;
+	padding-top: 24px;
+}
+.navbar::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+.nav-pills::after {
+	clear: both;
+	content: "";
+}
+.nav-tabs::after {
+	clear: both;
+	content: "";
+}
+.navbar {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+	position: relative;
+	border: medium none;
+	margin: 0;
+	min-height: 64px;
+	z-index: 50;
+	.navbar-brand:hover {
+		text-decoration: none;
+	}
+}
+.p-lg {
+	padding: 32px;
+	.md-check a {
+		color: $color_fun_green_approx;
+	}
+}
+.text-color {
+	color: $color_fun_green_approx;
+}
+.md-whiteframe-z2 {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none !important;
+}
+.panel {
+	background-color: transparent !important;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+}
+.nw-gra-box {
+	border: 1px solid $color_celeste_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 15px !important;
+}
+.w-full {
+	width: 100%;
+}
+.r-r {
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 3px;
+}
+.r-t {
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 3px;
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 3px;
+}
+.r-l {
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 3px;
+}
+img {
+	border: 0 none;
+	vertical-align: middle;
+}
+legend {
+	border: 0 none;
+}
+.text-md {
+	font-size: 17px;
+}
+sub {
+	@extend %extend_3;
+}
+sup {
+	@extend %extend_3;
+}
+.m {
+	margin: 16px;
+}
+.form-group {
+	margin-bottom: 1rem;
+}
+.sng-kk {
+	margin-bottom: 20px;
+}
+.us-lb {
+	float: left;
+	width: 8%;
+	img {
+		position: relative;
+		top: 5px;
+		width: 20px;
+	}
+}
+label {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	font-weight: 400;
+}
+output {
+	display: inline-block;
+}
+dd {
+	margin-bottom: 0.5rem;
+}
+h1 {
+	margin-bottom: 0.5rem;
+	@extend %extend_5;
+}
+h2 {
+	margin-bottom: 0.5rem;
+	@extend %extend_5;
+}
+h3 {
+	margin-bottom: 0.5rem;
+	@extend %extend_5;
+}
+h4 {
+	margin-bottom: 0.5rem;
+	@extend %extend_5;
+}
+h5 {
+	margin-bottom: 0.5rem;
+	@extend %extend_5;
+}
+h6 {
+	margin-bottom: 0.5rem;
+	@extend %extend_5;
+}
+.form-control {
+	width: 90% !important;
+	background-color: $white;
+	background-image: none;
+	border: 1px solid $color_celeste_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0.25rem;
+	color: $color_scarpa_flow_approx;
+	font-size: 1rem;
+	line-height: 1.5;
+	padding: 0.375rem 0.75rem;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	display: block;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	&:focus {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+	}
+}
+.form-control-file {
+	display: block;
+}
+.form-control-range {
+	display: block;
+}
+.progress {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+}
+.progress-bar {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+}
+.ur-sn-in {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px !important;
+	float: left;
+	width: 90%;
+}
+button {
+	margin: 0;
+	&.rd-nw {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 10px !important;
+		float: left;
+		width: 90%;
+	}
+}
+input {
+	margin: 0;
+}
+select {
+	margin: 0;
+}
+textarea {
+	margin: 0;
+}
+.md-btn {
+	border: 0 none;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-variant: inherit;
+	font-weight: 700;
+	line-height: inherit;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	outline: 0 none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-decoration: none;
+	cursor: pointer;
+	&.md-fab {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 5px 0 $black_26;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateZ(0px);
+		overflow: hidden;
+	}
+	&.md-raised {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateZ(0px);
+		&:not([disabled]) {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 2px 5px 0 $black_26;
+		}
+	}
+	&:focus {
+		outline: 0 none;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+}
+.btn-block {
+	display: block;
+}
+.p-h-md {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+[md-ink-ripple] {
+	position: relative;
+}
+a {
+	cursor: pointer;
+	&:active {
+		outline: 0 none;
+	}
+	&:hover {
+		outline: 0 none;
+	}
+}
+.rd-nw {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 8px !important;
+}
+.btn {
+	white-space: nowrap;
+}
+.text-ellipsis {
+	white-space: nowrap;
+}
+.md-list-item-content {
+	overflow: hidden;
+}
+.no-select {
+}
+.m-b-md {
+	margin-bottom: 10px;
+}
+.md-check {
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	position: relative;
+}
+.onemmrtxt {
+	img {
+		max-width: 100%;
+		vertical-align: middle;
+		width: 135px;
+	}
+	h5 {
+		@extend %extend_4;
+	}
+	h6 {
+		@extend %extend_4;
+	}
+}
+.sn-txt {
+	color: $color_fun_green_approx;
+	text-align: center;
+	border-bottom: 1px solid $color_fun_green_approx;
+	margin-top: 40px;
+	padding-bottom: 20px;
+}
+.tp-br {
+	color: $color_fun_green_approx;
+	text-align: center;
+}
+.h1 {
+	@extend %extend_5;
+}
+.h2 {
+	@extend %extend_5;
+}
+.h3 {
+	@extend %extend_5;
+}
+.h4 {
+	@extend %extend_5;
+}
+.h5 {
+	@extend %extend_5;
+}
+.h6 {
+	@extend %extend_5;
+}
+.txt-bl-login {
+	margin-top: 30px;
+	p {
+		color: $color_fun_green_approx;
+		font-size: 10px;
+	}
+}
+dl {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+ol {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+pre {
+	margin-top: 0;
+}
+ul {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+address {
+	margin-bottom: 1rem;
+}
+.easyPieChart > div {
+	vertical-align: middle;
+}
+.sl-icon > i {
+	vertical-align: middle;
+}
+.m-b.text-md.text-lg-abv-box {
+	margin-bottom: 20px;
+	margin-top: 10px;
+	> span {
+		font-size: 35px !important;
+	}
+}
+.m-c.text-md {
+	font-size: 25px !important;
+}
+.md-switch i::after {
+	outline: 0 none;
+}
+.list-icon div {
+	white-space: nowrap;
+}
+.br-cd img {
+	margin-top: 10px;
+	width: auto !important;
+}

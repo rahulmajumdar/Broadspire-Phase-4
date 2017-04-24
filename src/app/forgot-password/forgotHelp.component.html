@@ -1,0 +1,129 @@
+<top-nav></top-nav>
+<div class = "wrapper change-security-section-page outerpages">
+<div class = "col-sm-12 center-block" style="float:none;text-align: center;font-size: 18px;">
+
+
+
+
+    </div>
+<div class="col-xs-12 main-container-secutirysetting-section">
+
+<div class="col-xs-4"></div>
+
+<div class="col-xs-4 main-content-reset-pass-info glb-shd-cls nw-reg-frm">
+  <span text-center style="font-weight: bold;color: #258c52;">Support Center</span><br><br>
+<ul>
+<li>Your Name</li>
+<li> <input type="text" class="form-control" [(ngModel)]="name"></li>
+<li>Your Email Address</li>
+<li><input type="email" class="form-control" [(ngModel)]="email">
+
+ <span style="/*! text-decoration: none; *//*! font-weight: normal; */font-style: italic;text-align: right;font-family: Helvetica;font-size: 11px;margin: 4px 0px 4px 0px;word-wrap: break-word;white-space: normal;color: black;">**This is the Email address we will use to contact you.</span>
+ </li>
+<li> Subject</li>
+<li><input type="text" class="form-control" [(ngModel)]="subject"></li>
+<li>Your Telephone #</li>
+<li><input  [(ngModel)] ="telephone" min="0"  class="form-control"
+oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+maxlength="10" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" /></li>
+<li> Claim Number</li>
+<li><input type="text" class="form-control" [(ngModel)]="claimNm"></li>
+<li> How may we help you?</li>
+<li><textarea class="form-control" [(ngModel)]="canIHelp"></textarea></li>
+<li>
+<span style="text-decoration: none;font-weight: normal;font-style: italic;text-align: right;font-family: Helvetica;font-size: 11px;margin: 4px 0px 4px 0px;word-wrap: break-word;white-space: normal;">**We will endeavor to respond to messages sent through this secure system within two business days. We will not share your contact information with outside parties.</span>
+</li>
+</ul>
+<div class="col-xs-12">
+<div class="col-xs-6"><button type="submit" (click)="helpSend()" class="btn-block md-button" >Send</button></div>
+<div class="col-xs-6"><button md-ink-ripple (click)="helpCancel()" type="submit" class="btn-block md-button">Cancel</button></div>
+</div>
+</div>
+<div class="col-xs-4"></div>
+</div>
+<div class="clear"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Help Page -->
+<!-- <div class="row" style="background-color:#fafbfa">
+<div class="col-lg-3 col-lg-offset-4" style="background-color:#ffffff">
+	<label for=""><u>Please validate your registration information</u></label><br><br>
+	<label for="">Your Name</label><br>
+	<input type="text" id="name" value="" [(ngModel)]="name"><br>
+	<label for="">Your email address</label><br>
+	<input type="text" id="email" value="" [(ngModel)]="email"><br>
+	<label for="">**This is the Email address we will use to contact you.</label>
+	<label for="">Subject</label><br>
+	<input type="text" id="subject" value="" [(ngModel)]="subject"><br>
+	<label for="">Your telephone #</label><br>
+	<input type="text" id="telephone" value="" [(ngModel)]="telephone"><br>
+	<label for="">Claim Number</label><br>
+	<input type="text" id="claimNm" value="" [(ngModel)]="claimNm"><br>
+	<label for="">How may we help you?</label><br>
+	<input type="text" id="canIHelp" value="" [(ngModel)]="canIHelp"><br>
+	<label for="">**We will endeavor to respond to messages sent through this secure system within two business days.
+		 We will not share your contact information with outside parties.</label><br><br>
+		 <button type="button" name="button" class = "btn btn-success" (click)="helpSend()">Send</button>
+		 <button type="button" name="button" class = "btn btn-danger" (click)="helpCancel()">Cancel</button>
+</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="row" style="background-color:#fafbfa">
+<div class="col-lg-3 col-lg-offset-4" style="background-color:#ffffff">
+	<label for=""><u>Please validate your registration information</u></label><br><br>
+	<label for="">Your Name</label><br>
+	<input type="text" name="" value="" [(ngModel)]="name"><br>
+	<label for="">Your email address</label><br>
+	<input type="email" name="" value="" [(ngModel)]="email"><br>
+	<label for="">**This is the Email address we will use to contact you.</label>
+	<label for="">Subject</label><br>
+	<input type="text" name="" value="" [(ngModel)]="subject"><br>
+	<label for="">Your telephone #</label><br>
+	<input type="text" name="" value="" [(ngModel)]="telephone"><br>
+	<label for="">Claim Number</label><br>
+	<input type="text" name="" value="" [(ngModel)]="claimNm"><br>
+	<label for="">How may we help you?</label><br>
+	<input type="text" name="" value="" [(ngModel)]="canIHelp"><br>
+	<label for="">**We will endeavor to respond to messages sent through this secure system within two business days.
+		 We will not share your contact information with outside parties.</label><br><br>
+		 <button type="button" name="button" class = "btn btn-success" (click)="helpSend()">Send</button>
+		 <button type="button" name="button" class = "btn btn-danger" (click)="helpCancel()">Cancel</button>
+</div>
+</div> -->

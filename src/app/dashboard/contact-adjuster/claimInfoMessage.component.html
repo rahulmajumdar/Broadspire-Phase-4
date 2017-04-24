@@ -1,0 +1,163 @@
+<style type="text/css">
+  .custom-column-msg-csutom-page.md-whiteframe-z2 {
+    padding: 15px;
+  }
+
+  .msg-custom-page ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .msg-custom-page li {
+    list-style: none;
+    margin-bottom: 15px;
+  }
+
+  .button-save-msg-pg {
+    margin-top: 40px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .button-save-msg-pg button {
+    width: 30%;
+  }
+
+  .data-re-fsb label {
+    font-size: 16px;
+    word-break: break-all
+  }
+
+  .fa-caret-up:before {
+    font-size: 19px;
+    margin-left: 10px;
+  }
+
+  .fa-caret-down:before {
+    font-size: 19px;
+    margin-left: 10px;
+  }
+
+  .col-sm-12.button-save-msg-pg {
+    text-align: center;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .msg-custom-page .col-sm-6 {
+      margin-bottom: 30px;
+    }
+  }
+</style>
+
+<div class="wrapper main-message-contracter-page ">
+  <div class="col-sm-12 msg-custom-page">
+    <div class="col-sm-6">
+      <div class="custom-column-msg-csutom-page md-whiteframe-z2 glb-shd-cls">
+        <ul>
+          <li>
+            <label class="font-bold">Your Name</label>
+            <input class="form-control" [(ngModel)]="Message_name" type="text" />
+          </li>
+          <li>
+            <label class="font-bold">Email</label>
+            <input class="form-control" [(ngModel)]="Message_email" type="email" />
+          </li>
+          <li>
+            <label class="font-bold">Telephone</label>
+            <input  [(ngModel)] ="Message_number" min="0"  class="form-control"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="10" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+          </li>
+          <li>
+            <label class="font-bold">Subject</label>
+            <input class="form-control" [(ngModel)]="Message_subject" type="text" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="custom-column-msg-csutom-page md-whiteframe-z2 glb-shd-cls">
+        <ul>
+          <li>
+            <label class="font-bold">Claim Number</label>
+            <p class="data-re-fsb"><label [(ngModel)]="claimNumber" ngDefaultControl>{{claimNumber}}</label></p>
+          </li>
+          <li>
+            <label class="font-bold">{{pageName}} Info</label>
+            <p style = "margin-bottom:0rem;"class="data-re-fsb"> <label [(ngModel)]="name" ngDefaultControl><b>Name:</b>{{name}}</label></p>
+            <p class="data-re-fsb"> <label [(ngModel)]="email" ngDefaultControl><b>Email:</b>{{email}}</label></p>
+          </li>
+          <!-- <li>
+
+          </li> -->
+          <li>
+            <label class="font-bold">How can we help you ?</label>
+            <p class="data-re-fsb"> <textarea [(ngModel)]="inputMessage" placeholder="Enter Message"></textarea></p>
+          </li>
+        </ul>
+        <!----------------- Image preview section starts ------------------------------------>
+        <div class="upload-image-section">
+          <ul>
+            <li class="listpreview1" style="display:none;">
+              <img class="imagepreview1" #img1 style="float:left;width:40px;height:40px;" />
+              <img class="deleteImage1" (click)="deletePreview1(img1)" src="imagesnew/remove.png" style="float:right;width:32px;height:32px;" />
+              <div style="clear:both;"></div>
+            </li>
+            <li class="listpreview2" style="display:none;">
+              <img class="imagepreview2" #img2 style="float:left;width:40px;height:40px;" />
+              <img class="deleteImage2" (click)="deletePreview2(img2)" src="img/remove.png" style="float:right;width:32px;height:32px;" />
+              <div style="clear:both;"></div>
+            </li>
+          </ul>
+        </div>
+        <!------------------- Upload Doc Section Starts ------------------------------------------------->
+        <!-- <label class="font-bold" ui-toggle-class="show, hide" target="#uploadDoc">Upload Attachments
+            <span class="pull-right auto">
+            <i class="fa inline fa-caret-down"></i>
+            <i class="fa none fa-caret-up"></i>
+            </span>
+            </label> -->
+            <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Upload Attachments
+  </button>
+        <div id="collapseExample" class="collapse">
+          <input type = "button" class="cma-btn-nw" value = "Camera"  *ngIf = "showCameraButton" (click) = "openCameraAndroid()" style="margin-top:15px; color: #000;"/>
+          <input type="file" (change)="profileImgChange(input)" #input class="inputFileName" id="fileName" accept="image/gif, image/jpeg, image/png"/>
+          <img id="capturedPhoto" #imgPhoto data-role="none" class="unknown1" />
+          <!-- <canvas class="capturedPhotoSpeakerPhotoEdit" #canvasPhoto width="140%" height="140%" style="display = none!important;"></canvas> -->
+          <br><br>
+          <label class="font-bold">Select Category</label><br>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" style="background: rgba(0,121,53,0.85)!important;color:#fff !important;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  {{selectedItem}}
+                  <span class="caret"></span>
+                  </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li *ngFor="let categ of categories let i = index"><a (click)="dropboxitemselected(i)">{{categ}}</a></li>
+            </ul>
+          </div>
+          <br>
+          <textarea class="form-control" [(ngModel)]="attachmentDescription" placeholder="Enter Description"></textarea>
+          <br><br>
+          <div class="col-sm-6 btn-cls-mesage-box">
+            <button md-ink-ripple type="submit" class="md-btn md-raised btn-block p-h-md" (click)="uploadDocSave(img1,img2,imgPhoto)" style="margin-bottom:20px;background-color: #007934;
+                   color: #ffffff;">Save</button>
+          </div>
+          <div class="col-sm-6 btn-cls-mesage-box">
+            <button md-ink-ripple type="submit" (click)="clearClaimInfoData(img1,img2,imgPhoto)"
+            class="md-btn md-raised btn-block p-h-md"
+             style="margin-bottom:20px;background-color: #c1392b;color: #ffffff;">Clear</button>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+        <!------------------ Upload Doc Section Ends ------------------------------------------------->
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 button-save-msg-pg">
+    <button md-ink-ripple type="submit" (click)="sendMessageData()" class="md-btn md-raised btn-block p-h-md" style="margin-bottom:20px;background-color: #007934;color: #ffffff;">Send</button>
+  </div>
+  <div class="clear"></div>
+</div>

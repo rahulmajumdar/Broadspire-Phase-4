@@ -1,0 +1,34 @@
+//colors
+$color_tuna_approx: #373a3c;
+$color_gallery_approx: #efeeee;
+$color_fun_green_approx: #007934;
+$color_celeste_approx: #ccc;
+$white: #fff;
+$color_scarpa_flow_approx: #55595c;
+$black_26: rgba(0, 0, 0, 0.26);
+
+//fonts
+$font_0: Open Sans;
+$font_1: Helvetica Neue;
+$font_2: Helvetica;
+$font_3: Arial;
+$font_4: sans-serif;
+
+body {
+	color: $color_tuna_approx;
+	font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0;
+	background-color: $color_gallery_approx !important;
+	height: 100%;
+	width: 100%;
+}
+.app {
+	height: 100%;
+	width: 100%;
+}
+html {
+	height: 100%;
+	width: 100%;
+}

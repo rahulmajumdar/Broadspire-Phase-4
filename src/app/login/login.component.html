@@ -1,0 +1,107 @@
+<div class="row height-hund">
+  <div class="col-sm-5 center-block" style="float:none;">
+    <div class="center-block w-xxl w-auto-xs p-v-md">
+      <div class="navbar">
+        <div class="row">
+          <div class="col-xs-5 col-sm-5 col-md-3 col-lg-5 center-block lg-pg-nw" style="float:none">
+            <img src="img/broadspire_logo.png" class="w-full r-t">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-12 center-block lg-pg-nw" style="float:none">
+            <div class="m-b text-md text-lg-abv-box" style="text-align:center;">
+              <!--  Sign in with your {{app.name}} Account -->
+              <span style="color: #007935;font-weight: bold;font-size: x-large;"> Welcome To Broadspire MyClaim<SUP style="font-weight: bold;font-weight: bold;position: relative;top: -14px;left: -2px;">SM</SUP></span><br>
+              <span style="color: #007935;font-weight: bold;font-size: larger;"> </span>
+
+              <div class="m-c text-md" style="color: #646569;font-weight: bold;font-size: larger;">
+
+                an iQ App
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-lg panel md-whiteframe-z2 text-color m nw-gra-box">
+        <form role="form" name="form" style="color: #646569;" novalidate>
+          <div class="form-group">
+            <div class="sng-kk">Sign in with your Broadspire Account</div>
+            <label class="us-lb">  <img src="images/id-icn.png "  /> </label>
+            <input class="form-control ur-sn-in" name="user" [(ngModel)]="username" type="email" />
+            <div style="clear:both;"></div>
+          </div>
+          <div class="form-group" style="margin-bottom:25px">
+            <label class="us-lb">  <img src="images/password-inc.png"/>  </label>
+            <input class="form-control ur-sn-in" name="pass" [(ngModel)]="password" type="{{type}}">
+            <span style="float: right;margin-top: -33px;padding-right: 15px;">
+        <i class="fa {{type=='password'?'fa-eye-slash':'fa-eye'}}" form-control-feedback (click)="type=_ss.toggleShow() "></i>
+    </span>
+            <!-- <a (click)="toggleShow()">show/hide</a> -->
+            <div style="clear:both;"></div>
+          </div>
+          <!-- ui-sref="ui.material.card" -->
+          <label class="us-lb">  </label>
+          <button md-ink-ripple type="submit" (click)="loginService(username,password)" class="md-btn md-raised btn-block p-h-md rd-nw" style="background-color: #007934;color: #ffffff;">Login</button>
+          <div style="clear:both;"></div>
+          <div class="m-b-md" style="margin-top: 5%;font-weight: normal;color: #007934;">
+            <label class="md-check" style="float:left;text-decoration: underline;">
+                  <a type="submit" style="z-index:999;" (click)="newUser()">
+                  New User
+                  </a>
+                  </label>
+            <a md-ink-ripple (click)="forgotPassword(username)" style="float:right;">
+              <span style="float:right;text-decoration: underline; z-index:999;"> Forgot Password</span>
+            </a>
+            <div style="clear:both;"></div>
+          </div>
+          <div class="m-b-md" style="font-weight: normal;color: #007934; z-index:999;">
+            <label class="md-check" style="float:left;text-decoration: underline;">
+                  <a type="submit" style="z-index:999;" md-ink-ripple routerLink="/registrationTutorial">
+                  Registration Tutorial
+                  </a>
+                  </label>
+          </div>
+          <div style="clear:both;"></div>
+        </form>
+      </div>
+      <div class="col-sm-12 txt-bl-login">
+        <p>By signing onto this web site, you agree to be bound by the terms of this My Claim Application Agreement (this "Agreement"). You represent and warrant that you are the employee who is the subject of the claim you will be viewing. You further represent
+          and warrant that you have the right and authority to agree to the terms and conditions of this Agreement. In addition, by signing onto this web site, you are agreeing to comply with the terms and conditions.
+        </p>
+      </div>
+      <div class="col-sm-12 onemmrtxt">
+        <div class="col-sm-6" style="padding-left:0px;">
+          <h5>DOWNLOAD THE APP. KEYWORD 'BROADSPIRE' or 'MYCLAIM'.</h5>
+          <div class="col-sm-6" style="padding-left:0px;">
+            <h6 style="font-style:italic;"> Apple Users</h6>
+            <a href="http://tiny.cc/sq14cy/"> <img src="images/apple.png" /></a>
+          </div>
+          <div class="col-sm-6" style="padding-left:0px;">
+            <h6 style="font-style:italic;">Android Users</h6>
+            <a href="http://tiny.cc/m214cy/"> <img src="images/android.png" /> </a>
+          </div>
+        </div>
+        <div class="col-sm-6 cd-continr">
+          <h5>OR SCAN THE QR CODE WITH YOUR MOBILE DEVICE</h5>
+          <div class="col-sm-6 br-cd">
+            <h6 style="font-style:italic;">Apple Users</h6>
+            <img src="images/IOS_App_QRC.png" />
+          </div>
+          <div class="col-sm-6 br-cd">
+            <h6 style="font-style:italic;">Android Users</h6>
+            <img src="images/Google_App_QRC.png" />
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 sn-txt">
+        <p>It's as easy as that!</p>
+      </div>
+      <div class="col-sm-12 tp-br">
+
+        <div class="col-sm-12">
+          *** Broadspire now extends its MyClaim service to your mobile device via Broadspire's MyClaimSM Mobile App. Use your smartphone to conveniently access real time views into claim payment information, contact the adjuster with the click of a button, search
+          providers and more. Registered users of Broadspire's injured Employee's Self Service System do not need to re-register.
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

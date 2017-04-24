@@ -1,0 +1,36 @@
+
+<!------------------------------------  header starts----------------------------------->
+
+<nav class="navbar navbar-dark bg-inverse navbar-fixed-top topnav"
+[class.headerBack] = "parent">
+  <div class="collapse navbar-toggleable-xs clearfix new-text-center">
+
+
+  <!----------------------------=======--  back button------------------------------>
+      <a md-ink-ripple class="navbar-item pull-left" (click)="goBack()"  *ngIf="parent">
+       <i class="fa fa-arrow-left" aria-hidden="true"></i>
+</a>
+
+
+    <a class="navbar-brand" >
+
+      <!-----------------------------------brand logo------------------------->
+      <img class="desktop-top-logo" src="img/broadspire-logo-eufw.png" alt="." style="max-height: 58px;">
+<div class="logo-mobile-new" *ngIf = "parent2">
+
+
+      <img src="img/broadspire-logo-eufw.png" alt="." style="max-height: 58px;">
+      </div>
+
+<!---------------------------------  page title----------------------------------->
+      <span class="title-main-site-page">{{title}}</span>
+
+<!--------------------------user name ----------------------------------------->
+
+      <span class="username-main-site-pages" style="float:right;font-size:15px;font-weight:500;position: relative;top: -13px;">{{WelcomeUsername}}</span></a>
+
+  </div>
+</nav>
+<div style="clear:both;"></div>
+
+<!------------------------------------  header ends----------------------------------->

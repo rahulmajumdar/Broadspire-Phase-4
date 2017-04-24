@@ -1,0 +1,23 @@
+
+<top-nav></top-nav>
+<div *ngIf = eulaShow class="wrapper eaula-main-page change-security-section-page outerpages">
+  <h2 style="text-decoration: none;font-weight: bold;text-align: center;font-family: Helvetica;font-size: 20px;margin: 4px 0px 4px 0px;word-wrap: break-word;white-space: normal;color: black;">Terms of Use Agreement</h2>
+  <h3 style="text-decoration: none;font-weight: normal;color: #1f3ef3;text-align: center;font-family: Helvetica;font-size: 18px;margin: 6px 0px 4px 0px;word-wrap: break-word;white-space: normal;">Please read the following agreement carefully, and at the bottom indicate if you agree or not.</h3>
+  <div width="100%" [innerHTML]="eulaFlagNewUser == 'null' ? agreement : updatedAgreement" style="/*! overflow: auto; *//*! height: auto; */color: black;text-align: left;margin-top: 3%;/*! word-wrap: normal; */"></div>
+  <!-- <div style="clear:both"></div> -->
+</div>
+<div *ngIf = eulaShow class="row col-sm-12">
+  <footer class="fix-ft-nw">
+    <div class="row col-xs-12 col-sm-12 col-lg-12 col-md-12 row-sm cl-2-no-cl">
+      <div class="row col-xs-2 col-sm-2 col-lg-2 col-md-2 row-sm"></div>
+      <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+        <button (click)="createNewUser()" class="md-btn md-raised btn-block p-h-md" style="/*! margin-bottom:20px; */background-color: rgb(38,146,87);;color: #ffffff;/*! background-color: rgb(152, 152, 152); *//*! margin-top: 5%; */margin-bottom: 3%;font-size:x-small;">I Agree</button>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+        <button (click)="goToLogin()" class="md-btn md-raised btn-block p-h-md" style="/*! background-color: rgb(152,152,152); */color: #ffffff;background-color: rgb(152, 152, 152);font-size:x-small;">I Do Not Agree</button>
+      </div>
+      <div class="row col-xs-2 col-sm-2 col-lg-2 col-md-2 row-sm">
+      </div>
+    </div>
+  </footer>
+</div>

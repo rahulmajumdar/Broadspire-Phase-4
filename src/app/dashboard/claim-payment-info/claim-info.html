@@ -1,0 +1,73 @@
+<div class = "wrapper paymentinfopage-main-page " ng-controller = "ClaimPaymentInfo_Ctrlr" ng-hide = "claimInfoHide" data-ng-init="init()">
+   <div class="col-lg-12 content-healthtick-page">
+      <ul class="glb-shd-cls">
+         <li class="col-xs-12 content-sectionheadlthticket-mains">
+            <div class="col-xs-6">
+               <div class="col-xs-4 collllencls">
+                  <span>Claim Number</span>
+               </div>
+               <div class="col-xs-8 collllenclsvalue">
+                  <span class = "text-1.1x">{{claimNumber}} </span>
+               </div>
+            </div>
+         </li>
+         <li class="col-xs-12 content-sectionheadlthticket-mains">
+            <div class="col-xs-6">
+               <div class="col-xs-4 collllencls">
+                  <span>Employee Name</span>
+               </div>
+               <div class="col-xs-8 collllenclsvalue">
+                  <span class = "text-1.1x"  ng-model = "employeeName">{{employeeName}}</span>
+               </div>
+            </div>
+         </li>
+         <li class="col-xs-12 content-sectionheadlthticket-mains">
+            <div class="col-xs-6">
+               <div class="col-xs-4 collllencls">
+                  <span>Date Of Loss</span>
+               </div>
+               <div class="col-xs-8 collllenclsvalue">
+                  <span class = "text-1.1x"  ng-model = "dateOfLoss">{{dateOfLoss}}</span>
+               </div>
+            </div>
+         </li>
+         <li class="col-xs-12 content-sectionheadlthticket-mains">
+            <div class="col-xs-6">
+               <div class="col-xs-4 collllencls">
+                  <span>Adjuster</span>
+               </div>
+               <div class="col-xs-8 collllenclsvalue">
+                  <span class = "text-1.1x" href ng-model = "adjusterName">{{adjusterName}}</span>
+               </div>
+            </div>
+         </li>
+         <li class="col-xs-12 content-sectionheadlthticket-mains">
+            <div class="col-xs-6">
+               <div class="col-xs-4 collllencls">
+                  <span>Contact</span>
+               </div>
+               <div class="col-xs-8 collllenclsvalue">
+                  <span> <img src = "img/mail.png" style="width:32px;height:32px;margin-right:15px;" [routerLink]="['/dashboard/claimInfoMessage']">
+                  <a (click)="openPhoneDialerFromClaimInfo()">
+                  <img src = "img/telephone.png" style="width:32px;height:29px;margin-right:15px;" />
+                  </a>
+                  </span>
+               </div>
+            </div>
+         </li>
+         <li class="col-xs-12 content-sectionheadlthticket-mains">
+            <div class="col-xs-6">
+               <div class="col-xs-4 collllencls">
+                  <span>Status</span>
+               </div>
+               <div class="col-xs-8 collllenclsvalue">
+                  <span class = "text-1.1x"  ng-model = "claimStatus">{{claimStatus}}</span>
+               </div>
+            </div>
+         </li>
+         <div class="clear"></div>
+      </ul>
+   </div>
+   <div class="clear"></div>
+     <div style="clear:both;"></div>
+</div>

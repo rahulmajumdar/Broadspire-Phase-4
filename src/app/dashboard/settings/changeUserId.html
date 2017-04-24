@@ -1,0 +1,52 @@
+<div class = "wrapper change-security-section-page">
+
+
+<div class="col-xs-12 main-container-secutirysetting-section">
+
+<div class="col-xs-4"></div>
+
+<div class="col-xs-4 main-content-reset-pass-info glb-shd-cls">
+
+  <ul>
+  <li><b>Please enter your new email address.</b></li>
+  </ul>
+
+<ul>
+
+<li>* New Email Address:</li>
+<li><input type="email" class="form-control" placeholder="Enter user name" [(ngModel)]="newUserName"></li>
+
+</ul>
+
+<ul>
+
+<li>* Re-Enter New Email Address:</li>
+<li><input type="email" class="form-control" placeholder="Re-Enter user name" [(ngModel)]="renewUserName"></li>
+
+</ul>
+
+<ul>
+<li><i>* This will serve as your userid and contact address</i></li>
+</ul>
+
+
+        <div class="col-xs-12">
+
+
+<div class="col-xs-6"><button type="submit" (click)="resetUserName(newUserName, renewUserName)" class="btn-block md-button" >Save</button></div>
+<div class="col-xs-6"><button md-ink-ripple class="btn-block md-button" (click)="settingMenu()">Cancel</button></div>
+
+
+</div>
+</div>
+
+
+
+
+<div class="col-xs-4"></div>
+
+</div>
+
+
+<div class="clear"></div>
+    </div>

@@ -1,0 +1,75 @@
+<div *ngIf=isShowContact class="wrapper contact-adjuster-page ">
+
+  <div class="center-the-header-width">
+    <div class="col-xs-12 header-adjuster-section glb-shd-cls">
+      <div class="dropdown">
+        <label class="bold-cls-global">Select Claim #</label>
+        <button class="btn btn-default dropdown-toggle"
+         style="background: rgba(0,121,53,0.85)!important;color:#fff !important;"
+          type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+              {{selectedClaim}}
+              <span class="caret"></span>
+              </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li *ngFor="let claim of claims1"><a (click)="dropboxitemselected(claim)">{{claim.claim_number}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="col-xs-3"></div>
+
+
+
+
+  <div class="col-xs-6 contentforadjuster-adjuster-section">
+
+    <!-- <div class="chead-text-adjuster-new"><span >Click to Contact</span></div> -->
+
+    <div class="main-divs-sivs-adjuster glb-shd-cls">
+
+
+      <div class="col-xs-4">
+
+
+        <div class="image-section adjusterlbl"><span><img src="imagesnew/mail_64x64.png" (click)="claimInfoMessage()"></span></div>
+
+        <div class="label-text-adjuster-page"><span style="font-weight:bold;" [(ngModel)]="name" ngDefaultControl>Email Adjuster:</span><br> {{name}}
+        </div>
+
+
+      </div>
+
+      <div class="col-xs-4">
+
+        <div class="image-section contantnumlbl"><span><img src="imagesnew/contact.png" (click) = "contact()"></span></div>
+
+        <div class="label-text-adjuster-page"><span style="font-weight:bold;" [(ngModel)]="phone" ngDefaultControl>Contact Adjuster:</span><br>
+          <span>{{phone}}</span>
+        </div>
+
+      </div>
+
+      <div class="col-xs-4">
+
+
+        <div class="image-section supervisorlbl"><span><img src="imagesnew/mail_64x64.png" (click)="emailSupervisor()"></span></div>
+
+        <div class="label-text-adjuster-page"><span style="font-weight:bold;" [(ngModel)]="superName" ngDefaultControl> Email Supervisor:</span><br>
+          <span>{{superName}}</span>
+        </div>
+
+
+      </div>
+      <div class="clear"></div>
+    </div>
+
+  </div>
+
+  <div class="col-xs-1"></div>
+
+
+  <div class="clear"></div>
+
+</div>

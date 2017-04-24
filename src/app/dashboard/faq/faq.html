@@ -1,0 +1,64 @@
+
+
+<!--
+    <div id="accordion" role="tablist" aria-multiselectable="true" *ngFor="let faq of faqs;let i = index">
+  <div class="card">
+    <div class="card-header" role="tab" id="question-{{i}}">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" [innerHTML]="faq.question"  data-parent="#accordion" href="#collapse-{{i}}" aria-expanded="false" aria-controls="collapseOne">
+
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapse-{{i}}" class="collapse" role="tabpanel">
+      <div class="card-block" [innerHTML]="faq.answer">
+
+      </div>
+    </div>
+  </div>
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class = "wrapper faq-main-page">
+<div class = "col-lg-12" >
+<br><br>
+<ul class="nav">
+<li *ngFor="let faq of faqs;let i = index" class="ng-scope">
+      <div class="panel-group" id="accordion" role="tablist"  aria-multiselectable="true">
+         <div class="panel panel-default">
+            <div class="panel-heading"  role="tab" id="question-{{i}}">
+               <h4 class="panel-title faqscollapse">
+                 <a class="collapsed" data-toggle="collapse" [innerHTML]="faq.question"  data-parent="#accordion" href="#collapse-{{i}}" aria-expanded="false" aria-controls="collapseOne">
+                  </a>
+                  <div style="clear:both;"></div>
+               </h4>
+            </div>
+            <div id="collapse-{{i}}" class="collapse" role="tabpanel">
+
+               <div class="panel-body" [innerHTML]="faq.answer">
+               </div>
+            </div>
+         </div>
+      </div>
+</li></ul>
+
+
+
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+  <div style="clear:both;"></div>
+</div>

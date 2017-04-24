@@ -1,0 +1,144 @@
+
+ <top-nav></top-nav>
+<div class="wrapper change-security-section-page newuser-page-section-mian-wrap outerpages">
+
+
+	<div class="col-xs-12 main-container-secutirysetting-section">
+
+		<div class="col-xs-4"></div>
+		<div class="col-xs-4 main-content-reset-pass-info glb-shd-cls  nw-reg-frm">
+			<span text-center style="font-weight: bold;color: #258c52;">REGISTERING USER </span><br><br>
+			<ul>
+				<li>First Name </li>
+				<li><input type="text" id="firstName" class="form-control" [(ngModel)]="firstName" /></li>
+				<li>Last Name</li>
+				<li> <input type="text" id="lastName" class="form-control" [(ngModel)]="lastName" /></li>
+				<li>Email</li>
+				<li><input type="email" id="email" class="form-control" [(ngModel)]="email" /></li>
+				<li>CLAIMANT INFORMATION</li>
+				<li>
+						Last 4 digits of Social Security #
+            <input  [(ngModel)] ="ssn" min="0"  class="form-control"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="4" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+				</li>
+        <!--  -->
+        <li>Date Of Birth </li>
+        <li>
+          <div class="col-xs-12 col-sm-12 mmkk-ssk">
+            <div class="col-xs-4 col-sm-4">
+              <input placeholder="mm"  [(ngModel)] ="dobmonth" min="0"  class="form-control"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <input placeholder="dd"  [(ngModel)] ="dobdate" min="0"  class="form-control"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <input placeholder="yyyy"  [(ngModel)] ="dobyear" min="0"  class="form-control"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="4" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+            </div>
+</div>
+<div class="clear"></div>
+</li>
+<!--  -->
+
+				<li>
+
+						<span> Home Zip Code</span><br>
+
+            <input [(ngModel)] ="hzc" min="0"  class="form-control"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="5" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+				</li>
+
+        <li>Date Of Loss </li>
+        <li>
+          <div class="col-xs-12 col-sm-12 mmkk-ssk">
+            <div class="col-xs-4 col-sm-4">
+              <input placeholder="mm"  [(ngModel)] ="dolmonth" min="0"  class="form-control"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <input placeholder="dd"  [(ngModel)] ="doldate" min="0"  class="form-control"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <input placeholder="yyyy"  [(ngModel)] ="dolyear" min="0"  class="form-control"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="4" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+            </div>
+</div>
+<div class="clear"></div>
+</li>
+				<span (click) = "dateOfLossInfo()" style="cursor:pointer; text-decoration: underline;font-weight: normal;color: #007934;text-align: right;font-family: Helvetica;font-size: 11px;margin: 8px 0px 4px 0px;word-wrap: break-word;white-space: normal;">Where do I find my Date of Loss?</span>
+
+
+				<li>Claim Number</li>
+
+
+
+				<li><input type="text" class="form-control" id="claimNumber" [(ngModel)]="claimNo"/>
+					<span (click)="claimNoInfo()" style=" cursor:pointer; text-decoration: underline;font-weight: normal;color: #007934;text-align: right;font-family: Helvetica;font-size: 11px;margin: 8px 0px 4px 0px;word-wrap: break-word;white-space: normal;">Where do I find my Claim Number?</span><br>
+				</li>
+			</ul>
+			<div class="col-xs-12 tititile">
+				<span text-center style="font-weight: bold;color: #258c52;text-decoration: underline;">Setup Online Reset Information (Select any 3)  </span>
+
+
+				<ul *ngFor="let ques of questions; let i = index">
+
+					<li><input type="checkbox" id="checkBox{{i}}" (change)="checkValue($event,i)">{{ques.question}}</li>
+					<li><input type="text" class="form-control" id="securityAns{{i}}" [(ngModel)]="inputElem[i]" style="display:none" /></li>
+
+				</ul>
+
+
+			</div>
+
+			<div class="col-xs-12">
+
+				<div class="col-xs-6"><button (click)="createNewUser1()" class="btn-block md-button">Continue</button></div>
+				<div class="col-xs-6"><button (click)="goToLogin()" class="btn-block md-button">Cancel</button></div>
+
+
+			</div>
+
+			<div class="col-xs-12">
+
+				<div class="col-xs-12"><button (click)="help()" class="btn-block md-button">Help</button></div>
+
+
+
+			</div>
+
+		</div>
+
+		<div class="col-xs-4"></div>
+
+
+
+	</div>
+
+	<div class="clear"></div>
+	<!-- IMAGE DIV -->
+	<div *ngIf= dolImgHide class="lossImg" style="cursor: pointer;
+    display: block;
+		border-style: solid;
+    border-color: #ff0000 #0000ff;
+    float: left;
+    z-index: 5;
+    position: absolute;
+    right: 285px;
+    top: 50px;">
+    <div class="innnerr-divv-new">
+    <button type="button" (click)="close()" class="closebutton">X</button>
+		<img src={{dolImg}}/>
+  </div>
+	</div>
+</div>
